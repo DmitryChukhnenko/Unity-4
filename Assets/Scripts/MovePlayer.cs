@@ -11,6 +11,10 @@ public class MovePlayer : MonoBehaviour
     public int jumpsPerformed = 0;
     public float doubleJumpTimeLimit = 0.5f;
 
+
+    private bool IsFacingRight = true;
+    private bool IsFlipped = false;
+
     private Rigidbody2D rb2;
 
     void Start() {
@@ -37,9 +41,27 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
+    private void Flip()
+    {
+        IsFlipped = !IsFlipped; 
+        transform.rotation = Quaternion.Euler(0, IsFlipped ? 180 : 0, 0);
+    }
+
     void Move() {
-        var horizontalInput = Input.GetAxis("Horizontal");
-        rb2.velocity = new Vector2(horizontalInput * playerSpeed, rb2.velocity.y);
+        float hor = Input.GetAxis("Horizontal");
+        if(hor != 0)
+        {
+            IsFacingRight = hor > 0;
+            if (!IsFacingRight && !IsFlipped)
+            {
+                Flip();
+            }
+            else if (IsFacingRight && IsFlipped)
+            {
+                Flip();
+            }
+        }
+        rb2.velocity = new Vector2(hor * playerSpeed, rb2.velocity.y);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {

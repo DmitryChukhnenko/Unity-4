@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
@@ -30,6 +31,9 @@ public class HealthBar : MonoBehaviour
         if (current < 0) current = 0;
         if (current > maxValue) current = maxValue;
         slider.value = current;
+        if (current == 0) {
+            SceneManager.LoadScene(0);
+        }
     }
 
     void UpdateUI() {

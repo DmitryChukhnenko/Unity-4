@@ -567,7 +567,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bee
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7803539400917505753, guid: 28538c3173cf23a4793223ba871e29c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5222,42 +5223,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bee
       objectReference: {fileID: 0}
+    - target: {fileID: 7803539400917505753, guid: 28538c3173cf23a4793223ba871e29c9, type: 3}
+      propertyPath: moveSpots.Array.data[0]
+      value: 
+      objectReference: {fileID: 1074430082}
+    - target: {fileID: 7803539400917505753, guid: 28538c3173cf23a4793223ba871e29c9, type: 3}
+      propertyPath: moveSpots.Array.data[1]
+      value: 
+      objectReference: {fileID: 29718111}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4644067605554477785, guid: 28538c3173cf23a4793223ba871e29c9, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 8716325877719897715}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28538c3173cf23a4793223ba871e29c9, type: 3}
 --- !u!4 &8716325877719897713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 694127663591405500, guid: 28538c3173cf23a4793223ba871e29c9, type: 3}
   m_PrefabInstance: {fileID: 8716325877719897712}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8716325877719897714 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4644067605554477785, guid: 28538c3173cf23a4793223ba871e29c9, type: 3}
-  m_PrefabInstance: {fileID: 8716325877719897712}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8716325877719897715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8716325877719897714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 904f66fee4288fb34b4b194e060cc266, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  spot: 0
-  next: 1
-  moveSpots:
-  - {fileID: 1074430082}
-  - {fileID: 29718111}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

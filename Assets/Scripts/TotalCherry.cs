@@ -16,4 +16,9 @@ public class TotalCherry : MonoBehaviour
             totalCherry.text = cherry.ToString();
         }
     }
+
+    public void AdjustValue(int number) {
+        cherry+=number;
+        totalCherry.text = cherry.ToString();
+    }
 }
